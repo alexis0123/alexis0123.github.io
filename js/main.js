@@ -8,8 +8,8 @@ window.addEventListener('scroll', () => {
 
 let passiveX = 0;
 function animateBackground() {
-  passiveOffset += 0.10;
-  passiveX += 0.10;
+  passiveOffset += 0.15;
+  passiveX += 0.15;
   bgGrid.style.backgroundPosition = `${passiveX}px ${scrollOffset + passiveOffset}px`;
   requestAnimationFrame(animateBackground);
 }
