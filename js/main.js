@@ -2,21 +2,14 @@ const bgGrid = document.getElementById('bg-lines');
 let scrollOffset = 0;
 let passiveOffset = 0;
 
-function animateBackground() {
-  passiveOffset += 0.20;
-  const totalOffset = scrollOffset + passiveOffset;
-  bgGrid.style.backgroundPosition = `0 ${totalOffset}px`;
-  requestAnimationFrame(animateBackground);
-}
-
 window.addEventListener('scroll', () => {
-  scrollOffset = window.scrollY * 0.4;
+  scrollOffset = -window.scrollY * 0.4;
 });
 
 let passiveX = 0;
 function animateBackground() {
-  passiveOffset += 0.20;
-  passiveX += 0.20; // horizontal drift
+  passiveOffset += 0.10;
+  passiveX += 0.10;
   bgGrid.style.backgroundPosition = `${passiveX}px ${scrollOffset + passiveOffset}px`;
   requestAnimationFrame(animateBackground);
 }
