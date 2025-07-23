@@ -63,7 +63,7 @@ const phrases = [
   "Building practical solutions"
 ];
 
-const letters = "7~_=L0d#<>";
+const letters = "7~_=L0d#<>       ";
 const dynamicText = document.getElementById("dynamic-text");
 let currentPhrase = 0;
 
