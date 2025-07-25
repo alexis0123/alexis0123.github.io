@@ -14,8 +14,6 @@ function animateBackground() {
   requestAnimationFrame(animateBackground);
 }
 
-animateBackground();
-
 document.querySelectorAll('.stack-card').forEach(card => {
   card.addEventListener('mouseenter', () => {
     const angle = (Math.random() * 6 - 3).toFixed(2);
@@ -51,9 +49,9 @@ window.addEventListener('scroll', () => {
 });
 
 const phrases = [
-  "Turning ideas into apps",
-  "From imagination to implementation",
-  "Building practical solutions"
+  "Aspiring Software Developer",
+  "Specializes in Android Dev",
+  "Turning ideas into apps"
 ];
 
 const letters = "7~_=L0d#<>       ";
@@ -91,3 +89,4 @@ function changePhrase() {
 
 setInterval(changePhrase, 3000);
 changePhrase();
+animateBackground();
