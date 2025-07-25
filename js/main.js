@@ -54,7 +54,7 @@ const phrases = [
   "Turning ideas into apps"
 ];
 
-const letters = "7~_=L0d#<>       ";
+const letters = "6789{}[]()<>/\ VWXYZab \|!?:=+-_*&%$#@^~  xyz01               ";
 const dynamicText = document.getElementById("dynamic-text");
 let currentPhrase = 0;
 

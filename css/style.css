@@ -56,7 +56,7 @@ section {
     130deg,
     transparent 0%,
     rgba(5, 11, 19, 0.609) 40%,
-    rgba(17, 34, 53, 0.6) 50%,
+    rgba(0, 32, 69, 0.6) 50%,
     transparent 60%
   );
   animation: shine 10s ease-in-out infinite;
