@@ -46,7 +46,7 @@
   <!-- Navbar -->
   <header class="fixed top-0 left-0 w-full bg-black bg-opacity-80 shadow-lg z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-      <a href="index.html" class="text-lg font-bold text-accent hover:opacity-80 transition">← Back</a>
+      <a href="index.html" class="text-lg font-bold text-accent hover:opacity-80 transition">Back</a>
       <h1 class="text-lg font-bold text-gray-200">Documentation</h1>
     </div>
   </header>
@@ -59,18 +59,59 @@
     </section>
 
   <!-- Intro -->
-  <section class="py-16 bg-gray-900 bg-opacity-70 backdrop-blur-sm animate-popIn" style="animation-delay: 0.3s;">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-6 text-gray-200">Project Overview</h3>
-      <p class="text-lg text-gray-400 leading-relaxed">
-        The JFINEX Collection System is an Android app I built to simplify student payment collection. 
-        Officers can record payments offline, automatically tally amounts by category, and export data 
-        to the admin system for reports. Let me walk you through how to use this app from settingup a collection, 
-        loading the setup to other officers with collection app, recoeding and tracking of receipts, to exporting 
-        data to csv for deeper analysis and other use cases.
+  <section class="py-20 bg-gray-900 bg-opacity-70 backdrop-blur-sm animate-popIn" style="animation-delay: 0.3s;">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 text-gray-200">
+        JFINEX Collection System
+      </h2>
+      <p class="text-lg md:text-xl text-gray-400 mb-10">
+        <span class="font-semibold">Platform & Tech:</span> Android [Kotlin, Jetpack Compose, RoomDB, Dagger Hilt, Kotlinx Serialization]
       </p>
+
+      <div class="max-w-3xl mx-auto mb-12">
+        <p class="text-gray-300 leading-relaxed text-lg">
+          The JFINEX Collection System replaces manual, paper-based student payment tracking with an offline-first Android app.
+          Officers can record payments without internet, automatically tally amounts by category, and export data into JSON/CSV
+          for the admin system to generate reports.
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-semibold text-gray-200 mb-6">Key Features</h3>
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+          <h4 class="font-bold text-blue-400 mb-2">Offline-first with RoomDB</h4>
+          <p class="text-gray-300 text-sm">All receipts stored locally, ensuring smooth collection even without connectivity.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+          <h4 class="font-bold text-blue-400 mb-2">Configurable Setup via Json</h4>
+          <p class="text-gray-300 text-sm">Admin uses student list and setup categories to upload json config, which officers then use for consistent collection.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+          <h4 class="font-bold text-blue-400 mb-2">Activity Logging</h4>
+          <p class="text-gray-300 text-sm">Tracks voided receipts, new student entries, and officer actions for accountability.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+          <h4 class="font-bold text-blue-400 mb-2">Encrypted Data Export & Import</h4>
+          <p class="text-gray-300 text-sm">Tallies are serialized using Kotlinx JSON and secured with encryption and hashing, ensuring both data integrity and safe integration with the admin reporting system.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-semibold text-gray-200 mb-6">Impact</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+          <p class="text-gray-300 text-sm">Replaced manual paper logs for 1400+ students.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+          <p class="text-gray-300 text-sm">Reduced reconciliation errors and sped up tallying.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+          <p class="text-gray-300 text-sm">Enabled secure record-sharing between multiple officers and the admin team.</p>
+        </div>
+      </div>
     </div>
   </section>
+
+
 
   <!-- Detail 1 -->
   <section class="py-16 animate-popIn" style="animation-delay: 0.6s;">
