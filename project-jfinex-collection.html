@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JFINEX Collection System - by Alexis Buban">
+  <meta name="author" content="Alexis Buban">
+  <title>JFINEX Collection System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            accent: '#3B82F6',
+          },
+          backgroundImage: {
+            'large-grid': 'linear-gradient(90deg, rgba(59,130,246,0.08) 1px, transparent 1px), linear-gradient(rgba(59,130,246,0.08) 1px, transparent 1px)',
+          },
+          backgroundSize: {
+            big: '120px 120px',
+          },
+          keyframes: {
+            popIn: {
+              '0%': { transform: 'scale(0.9)', opacity: '0' },
+              '60%': { transform: 'scale(1.05)', opacity: '1' },
+              '100%': { transform: 'scale(1)', opacity: '1' }
+            }
+          },
+          animation: {
+            popIn: 'popIn 1s ease-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="relative bg-black text-gray-200 font-sans overflow-x-hidden">
+  
+  <!-- Background Grid -->
+  <div id="bg-lines" class="fixed inset-0 bg-large-grid bg-big opacity-150 -z-10"></div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-black bg-opacity-80 shadow-lg z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="index.html" class="text-lg font-bold text-accent hover:opacity-80 transition">← Back</a>
+      <h1 class="text-lg font-bold text-gray-200">Documentation</h1>
+    </div>
+  </header>
+
+  <!-- Cover -->
+    <section id="cover" class="relative w-full h-72 md:h-[20rem]">
+    <img src="assets/images/collection-system.jpg"
+       class="w-full h-full object-cover object-center"
+       alt="JFINEX Collection System" />
+    </section>
+
+  <!-- Intro -->
+  <section class="py-16 bg-gray-900 bg-opacity-70 backdrop-blur-sm animate-popIn" style="animation-delay: 0.3s;">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6 text-gray-200">Project Overview</h3>
+      <p class="text-lg text-gray-400 leading-relaxed">
+        The JFINEX Collection System is an Android app I built to simplify student payment collection. 
+        Officers can record payments offline, automatically tally amounts by category, and export data 
+        to the admin system for reports. Let me walk you through how to use this app from settingup a collection, 
+        loading the setup to other officers with collection app, recoeding and tracking of receipts, to exporting 
+        data to csv for deeper analysis and other use cases.
+      </p>
+    </div>
+  </section>
+
+  <!-- Detail 1 -->
+  <section class="py-16 animate-popIn" style="animation-delay: 0.6s;">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-shrink-0 w-full md:w-1/2 rounded-2xl border-4 border-accent overflow-hidden shadow-lg">
+        <video src="assets/videos/jfinex-collection-system-createsetup.mp4" 
+               controls 
+               autoplay 
+               muted 
+               playsinline
+               class="object-cover w-full h-full max-h-[400px]">
+        </video>
+      </div>
+      <div class="text-left md:w-1/2">
+        <h3 class="text-3xl font-bold mb-6 text-gray-200">Setting up Collection</h3>
+        <p class="leading-relaxed text-gray-400">
+          The student list, stored in a CSV file, is required for easier querying.
+          This is the first requirement when creating a setup. Each setup must contain 
+          at least one field, and if that field includes categories, it must have at 
+          least two categories.Afterward, the admin should load the same setup to be 
+          distributed to other officers, ensuring consistency for matching collections 
+          later.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail 2 -->
+  <section class="py-16 bg-gray-900 bg-opacity-70 backdrop-blur-sm animate-popIn" style="animation-delay: 0.9s;">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-10">
+      <div class="flex-shrink-0 w-full md:w-1/2 rounded-2xl border-4 border-accent overflow-hidden shadow-lg">
+        <video src="assets/videos/jfinex-collection-system-workflow.mp4" 
+               controls 
+               autoplay 
+               muted 
+               playsinline
+               class="object-cover w-full h-full max-h-[400px]">
+        </video>
+      </div>
+      <div class="text-left md:w-1/2">
+        <h3 class="text-3xl font-bold mb-6 text-gray-200">Student Receipts and Tally Process</h3>
+        <p class="leading-relaxed text-gray-400">
+          The setup is first loaded from the admin, where field options are defined. From this setup, you can 
+          begin recording student collections, adding students, and preparing tallies to submit back to the admin.
+          <br><br>
+          To void a receipt, you must re-enter the student’s name. All voided receipts are recorded in the 
+          activity log to ensure proper tracking of data flow and officer actions. Likewise, when new students 
+          are added, the activity log also reflects these entries along with the officer’s name.
+          <br><br>
+          Once a tally is exported to a JSON file, all related activities are marked as completed and are no longer counted as 
+          “new.” Only new receipt entries recorded after the export will be included in the next tally. All data 
+          is stored in the JSON file, which can then be imported back into the admin system.
+          <br><br>
+          After a tally import, the activities are reflected in the system and can be used for data management, reporting, and other purposes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail 3 -->
+  <section class="py-16 animate-popIn" style="animation-delay: 1.2s;">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-shrink-0 w-full md:w-1/2 rounded-2xl border-4 border-accent overflow-hidden shadow-lg">
+        <img src="assets/images/Xor.png" alt="Xor Encryption" 
+             class="object-cover w-full h-full max-h-[400px]">
+      </div>
+      <div class="text-left md:w-1/2">
+        <h3 class="text-3xl font-bold mb-6 text-gray-200">Uses Xor Encryption</h3>
+        <p class="leading-relaxed text-gray-400">
+          To keep student and payment data secure, I added a simple encryption system using a custom XOR 
+          function. Before storing sensitive information in JSON files such as tally and config 
+          where all receipt numbers are stored, the app transforms the data 
+          into a scrambled format using a secret key. This ensures that if someone accesses the files outside 
+          the app, they won’t be able to read or tamper with the information.
+          <br><br>
+          The encryption works by taking each character of the data and combining it with a corresponding 
+          character from the key using a bitwise XOR operation. The result is then encoded in Base64 for storage. 
+          Later, the app can reverse the process using the same key to recover the original data. In simple 
+          terms, it’s like locking the data in a secure box that only the app can open, keeping student records 
+          and receipts protected while still allowing smooth offline use and export/import workflows.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 text-sm bg-black">
+    &copy; 2025 Alexis Buban. All rights reserved.
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>animateBackground();</script>
+</body>
+</html>
