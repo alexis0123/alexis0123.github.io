@@ -49,9 +49,9 @@ window.addEventListener('scroll', () => {
 });
 
 const phrases = [
-  "Aspiring Software Developer",
-  "Specializes in Android Development",
-  "Turning ideas into apps"
+  "Tech Enthusiast",
+  "Working with Data",
+  "Always Learning"
 ];
 
 const letters = "6789{}[]()<>/\ VWXYZab \|!?:=+-_*&%$#@^~  xyz01               ";
