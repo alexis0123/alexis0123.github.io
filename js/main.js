@@ -50,7 +50,7 @@ window.addEventListener('scroll', () => {
 
 const phrases = [
   "Tech Enthusiast",
-  "Working with Data",
+  "Service Desk",
   "Always Learning"
 ];
 
