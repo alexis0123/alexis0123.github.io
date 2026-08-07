@@ -130,14 +130,11 @@
         </a>
       </div>
       <div class="text-left md:w-1/2">
-        <h3 class="text-3xl font-bold mb-6 text-gray-200">Setting up Collection</h3>
+        <h3 class="text-3xl font-bold mb-6 text-gray-200">Static Network Configuration</h3>
         <p class="leading-relaxed text-gray-400">
-          The student list, stored in a CSV file, is required for easier querying.
-          This is the first requirement when creating a setup. Each setup must contain 
-          at least one field, and if that field includes categories, it must have at 
-          least two categories.Afterward, the admin should load the same setup to be 
-          distributed to other officers, ensuring consistency for matching collections 
-          later.
+          Configured manual IPv4 static addressing and subnetting options across all virtual machines within Oracle VirtualBox. 
+          This configuration establishes a reliable local sandbox routing environment, ensuring consistent host-to-guest networking 
+          connectivity and enabling seamless cross-machine communication without relying on dynamic DHCP leases.
         </p>
       </div>
     </div>
@@ -158,21 +155,10 @@
         </a>
       </div>
       <div class="text-left md:w-1/2">
-        <h3 class="text-3xl font-bold mb-6 text-gray-200">Student Receipts and Tally Process</h3>
-        <p class="leading-relaxed text-gray-400">
-          The setup is first loaded from the admin, where field options are defined. From this setup, you can 
-          begin recording student collections, adding students, and preparing tallies to submit back to the admin.
-          <br><br>
-          To void a receipt, you must re-enter the student’s name. All voided receipts are recorded in the 
-          activity log to ensure proper tracking of data flow and officer actions. Likewise, when new students 
-          are added, the activity log also reflects these entries along with the officer’s name.
-          <br><br>
-          Once a tally is exported to a JSON file, all related activities are marked as completed and are no longer counted as 
-          “new.” Only new receipt entries recorded after the export will be included in the next tally. All data 
-          is stored in the JSON file, which can then be imported back into the admin system.
-          <br><br>
-          After a tally import, the activities are reflected in the system and can be used for data management, reporting, and other purposes.
-        </p>
+        <h3 class="text-3xl font-bold mb-6 text-gray-200">Active Directory Forest & OUs</h3>
+        Established a secure root domain forest structure (company.com) using Active Directory Domain Services (AD DS). 
+        Organized the directory layout by partitioning separate Organizational Units (OUs) to mimic a corporate environment, 
+        successfully segmenting users, resources, and computers between the IT/Helpdesk and Sales departments.
       </div>
     </div>
   </section>
@@ -188,20 +174,10 @@
         </a>
       </div>
       <div class="text-left md:w-1/2">
-        <h3 class="text-3xl font-bold mb-6 text-gray-200">Uses Xor Encryption</h3>
-        <p class="leading-relaxed text-gray-400">
-          To keep student and payment data secure, I added a simple encryption system using a custom XOR 
-          function. Before storing sensitive information in JSON files such as tally and config 
-          where all receipt numbers are stored, the app transforms the data 
-          into a scrambled format using a secret key. This ensures that if someone accesses the files outside 
-          the app, they won’t be able to read or tamper with the information.
-          <br><br>
-          The encryption works by taking each character of the data and combining it with a corresponding 
-          character from the key using a bitwise XOR operation. The result is then encoded in Base64 for storage. 
-          Later, the app can reverse the process using the same key to recover the original data. In simple 
-          terms, it’s like locking the data in a secure box that only the app can open, keeping student records 
-          and receipts protected while still allowing smooth offline use and export/import workflows.
-        </p>
+        <h3 class="text-3xl font-bold mb-6 text-gray-200">Account Management & Security Policies</h3>
+        Utilized Active Directory Users and Computers (ADUC) to perform standard technical support ticket fulfillment workflows. 
+        Practiced advanced troubleshooting protocols for account lockouts, cleared blocked states, modified group objects, and 
+        enforced credential compliance by mandating the "User must change password at next logon" setting.
       </div>
     </div>
   </section>
@@ -222,21 +198,10 @@
         </a>
       </div>
       <div class="text-left md:w-1/2">
-        <h3 class="text-3xl font-bold mb-6 text-gray-200">Student Receipts and Tally Process</h3>
-        <p class="leading-relaxed text-gray-400">
-          The setup is first loaded from the admin, where field options are defined. From this setup, you can 
-          begin recording student collections, adding students, and preparing tallies to submit back to the admin.
-          <br><br>
-          To void a receipt, you must re-enter the student’s name. All voided receipts are recorded in the 
-          activity log to ensure proper tracking of data flow and officer actions. Likewise, when new students 
-          are added, the activity log also reflects these entries along with the officer’s name.
-          <br><br>
-          Once a tally is exported to a JSON file, all related activities are marked as completed and are no longer counted as 
-          “new.” Only new receipt entries recorded after the export will be included in the next tally. All data 
-          is stored in the JSON file, which can then be imported back into the admin system.
-          <br><br>
-          After a tally import, the activities are reflected in the system and can be used for data management, reporting, and other purposes.
-        </p>
+        <h3 class="text-3xl font-bold mb-6 text-gray-200">Shared Folder & Network Drive Mapping</h3>
+        Configured a centralized Windows File Server role containing accessible shared directory trees. Successfully provisioned 
+        network resource visibility and deployed a Map Network Drive configuration onto end-user client workstations, enabling automated 
+        file sharing across different business departments under strict resource access bounds.
       </div>
     </div>
   </section>
