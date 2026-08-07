@@ -53,7 +53,7 @@
 
   <!-- Cover -->
     <section id="cover" class="relative w-full h-72 md:h-[20rem]">
-    <img src="assets/images/collection-system.jpg"
+    <img src="assets/images/aduc-lab1-profile.png"
        class="w-full h-full object-cover object-center"
        alt="Windows Server Virtual Homelab for Helpdesk" />
     </section>
@@ -118,13 +118,16 @@
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
       <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
       <div class="flex-shrink-0 w-full md:w-1/2 rounded-2xl border-4 border-accent overflow-hidden shadow-lg">
-        <video src="assets/videos/jfinex-collection-system-createsetup.mp4" 
+        <a href="assets/images/static-ip-ss.png" target="_blank" class="block w-full h-full">
+          <img src="assets/images/static-ip-ss.png" 
                controls 
                autoplay 
                muted 
                playsinline
                class="object-cover w-full h-full max-h-[400px]">
-        </video>
+      
+          </img>
+        </a>
       </div>
       <div class="text-left md:w-1/2">
         <h3 class="text-3xl font-bold mb-6 text-gray-200">Setting up Collection</h3>
@@ -144,13 +147,15 @@
   <section class="py-16 bg-gray-900 bg-opacity-70 backdrop-blur-sm" style="animation-delay: 0.9s;">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-10">
       <div class="flex-shrink-0 w-full md:w-1/2 rounded-2xl border-4 border-accent overflow-hidden shadow-lg">
-        <video src="assets/videos/jfinex-collection-system-workflow.mp4" 
+        <a href="assets/images/forest-ss.png" target="_blank" class="block w-full h-full">
+          <img src="assets/images/forest-ss.png" 
                controls 
                autoplay 
                muted 
                playsinline
                class="object-cover w-full h-full max-h-[400px]">
-        </video>
+          </img>
+        </a>
       </div>
       <div class="text-left md:w-1/2">
         <h3 class="text-3xl font-bold mb-6 text-gray-200">Student Receipts and Tally Process</h3>
@@ -176,8 +181,11 @@
   <section class="py-16" style="animation-delay: 1.2s;">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
       <div class="flex-shrink-0 w-full md:w-1/2 rounded-2xl border-4 border-accent overflow-hidden shadow-lg">
-        <img src="assets/images/Xor.png" alt="Xor Encryption" 
+        <a href="assets/images/account-policy-ss.png" target="_blank" class="block w-full h-full">
+          <img src="assets/images/account-policy-ss.png" alt="Xor Encryption" 
              class="object-cover w-full h-full max-h-[400px]">
+          </img>
+        </a>
       </div>
       <div class="text-left md:w-1/2">
         <h3 class="text-3xl font-bold mb-6 text-gray-200">Uses Xor Encryption</h3>
@@ -197,6 +205,42 @@
       </div>
     </div>
   </section>
+
+  <!-- Detail 4 -->
+  <section class="py-16 bg-gray-900 bg-opacity-70 backdrop-blur-sm" style="animation-delay: 0.9s;">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-10">
+      <div class="flex-shrink-0 w-full md:w-1/2 rounded-2xl border-4 border-accent overflow-hidden shadow-lg">
+        <a href="assets/images/network-drive-ss.png" target="_blank" class="block w-full h-full">
+          <img src="assets/images/network-drive-ss.png" 
+               controls 
+               autoplay 
+               muted 
+               playsinline
+               class="object-cover w-full h-full max-h-[400px]">
+        
+          </img>
+        </a>
+      </div>
+      <div class="text-left md:w-1/2">
+        <h3 class="text-3xl font-bold mb-6 text-gray-200">Student Receipts and Tally Process</h3>
+        <p class="leading-relaxed text-gray-400">
+          The setup is first loaded from the admin, where field options are defined. From this setup, you can 
+          begin recording student collections, adding students, and preparing tallies to submit back to the admin.
+          <br><br>
+          To void a receipt, you must re-enter the student’s name. All voided receipts are recorded in the 
+          activity log to ensure proper tracking of data flow and officer actions. Likewise, when new students 
+          are added, the activity log also reflects these entries along with the officer’s name.
+          <br><br>
+          Once a tally is exported to a JSON file, all related activities are marked as completed and are no longer counted as 
+          “new.” Only new receipt entries recorded after the export will be included in the next tally. All data 
+          is stored in the JSON file, which can then be imported back into the admin system.
+          <br><br>
+          After a tally import, the activities are reflected in the system and can be used for data management, reporting, and other purposes.
+        </p>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Footer -->
   <footer class="py-6 text-center text-gray-500 text-sm bg-black">
